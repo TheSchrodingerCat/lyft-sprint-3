@@ -1,8 +1,21 @@
 /*
 Colors: 
-#E54E79;
+#E54E79; nav
 #E56385;
 #00B2A9;
 #75726C;
 #EDE9E2
 */
+
+*{
+	font-family: ‘Raleway’, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* navbar */
+
+.navbar{
+	background: #E54E79;
+	width: 
+}
