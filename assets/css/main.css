@@ -183,3 +183,19 @@ Colors:
 	border-radius: 15px;
 }
 
+
+/* footer */
+
+#foot-uno{
+	width: 100%;
+	height: 170px;
+	background: #75726C;
+	color: white;
+}
+
+#foot-dos{
+	width: 100%;
+	height: 50px;
+	background: green;
+	color: white;
+}
