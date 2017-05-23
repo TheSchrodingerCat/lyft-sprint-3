@@ -17,5 +17,28 @@ Colors:
 
 .navbar{
 	background: #E54E79;
-	width: 
+	width: 100%;
+	height: 83px;
+	padding-left: 200px;
+	padding-right: 100px;
+	box-sizing: border-box;
+	/*display: inline-block;*/
+	overflow: auto;
+}
+
+.logo{
+	background: url("../img/logo-white.png");
+	background-size: cover;
+	width: 70px;
+	height: 50px;
+	margin: 16px;
+	float: left;
+}
+
+.menu{
+	box-sizing: content-box;
+	width: 110px;
+	margin-top: 30px;
+	color: white;
+	float: right;
 }
