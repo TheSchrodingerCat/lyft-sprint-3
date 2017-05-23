@@ -46,36 +46,69 @@ Colors:
 
 /* header */
 
+/*imagen header*/
 .imgdrive{
-    /* The image used */
     background-image: url("../img/cropped-Lyft-Promo-Codes-car-1.jpg");
-
-    /* Set a specific height */
     height: 700px; 
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-
-
-	/*background: url(../img/cropped-Lyft-Promo-Codes-car-1.jpg);
-	background-size: cover;
-	width: 100%;
-	height: 700px;
-	box-sizing: border-box;*/
 }
 
-
-
+/*div formulario*/
 .formreg{
 	width: 500px;
 	height: 398px;
-	background: red;
+	padding: 60px 40px;
+	box-sizing: border-box;
+	background: #EDE9E2;
 	position: absolute;
 	top: 200px;
 	right: 0;
 	z-index: 1;
+}
+
+/* títulos */
+.title{
+	font-size: 30px;
+	font-weight: bold;
+	color: #00B2A9;
+	margin-bottom: 14px;
+}
+
+.subtitle{
+	font-size: 15px;
+	color: #75726C;
+	margin-bottom: 14px;
+}
+
+/*input*/
+.cellnumber{
+	width: 90%;
+	height: 25px;
+	padding-left: 5px;
+	background: #EDE9E2;
+	box-shadow: 0 1px 0 0 #75726C;
+	margin-bottom: 17px;
+}
+
+/*boton*/
+.becomedriver{
+	width: 210px;
+	height: 45px;
+	background: #E56385;
+	color: white;
+	font-size: 15px;
+	border-radius: 10px;
+	margin-bottom: 17px;
+}
+
+.imgdrive .formreg .parraf{
+	color: #75726C;
+	padding: 5px 0;
+}
+
+#p1{
+	margin-bottom: 10px;
 }
