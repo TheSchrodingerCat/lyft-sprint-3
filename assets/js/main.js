@@ -22,10 +22,10 @@ for (i=0 ; i<largeX ; i++){
 	ancho.setAttribute("class","anchoCasilla");
 	for (j=0 ; j<largeY ; j++){
 		alto = document.createElement("div");
-		alto.setAttribute("class","altoCasilla");
 
 		//se muestra en el HTML
 		alto.innerHTML = tablero[i][j];
+		alto.setAttribute("class","altoCasilla");
 
 		//cada ancho almacena largeY divs de alto, por tanto:
 		ancho.appendChild(alto);
