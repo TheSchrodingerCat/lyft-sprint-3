@@ -220,6 +220,10 @@ Colors:
 	margin-bottom: 5px;
 }
 
+#titlebox-dos{
+	font-size: 35px;
+}
+
 .cont{
 	margin-bottom: 5px;
 }
@@ -228,8 +232,15 @@ Colors:
 	list-style-type: none;
 }
 
+#mi-list-uno{
+	position: absolute;
+	bottom: 10px;
+}
+
 #mi-list-dos{
 	margin-top: 28px;
+	position: absolute;
+	bottom: 10px;
 }
 
 /* footer */
@@ -253,6 +264,12 @@ Colors:
 	margin-top: 16px;
 }
 
+.link{
+	text-decoration: none;
+	color: #4CE3F5;
+	font-family: 'Roboto Mono', monospace;
+}
+
 /*--- TABLERO ---*/
 
 .tablero{
@@ -274,7 +291,6 @@ Colors:
 	width: 100%;
 	height: 55px;
 	border: black;
-	/*float: left;*/
 }
 
 .altoCasilla{
@@ -288,8 +304,6 @@ Colors:
 	padding: 10px;
 	border: 5px #900C3F solid;
 }
-
-
 
 /*para borrar todo*/
 .nothing{
