@@ -31,8 +31,9 @@ for (i=0 ; i<largeX ; i++){
 		ancho.appendChild(alto);
 	}
 	//ahora la div padre adopta el tablero
-	table.appendChild(alto);
+	table.appendChild(ancho);
 }
+
 
 
 
