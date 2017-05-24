@@ -40,14 +40,24 @@
 		<!-- (2 divs: una de ingreso de coordenadas y una oculta con el tablero) -->
 		<div class="contenedor" id="container">
 			<!-- interfaz -->
-			<div class="initplay nothing" id="init-play">
-				<i class="fa fa-car" aria-hidden="true"></i> <input type="text" class="posicion" id="posicion-x" placeholder="X coordinate">
-				<i class="fa fa-car" aria-hidden="true"></i> <input type="text" class="posicion" id="posicion-y" placeholder="Y coordinate"><br>
+			<div class="initplay" id="init-play">
+				<i class="fa fa-car" aria-hidden="true"></i> 
+				<select type="number" class="posicion" id="posicion-x" placeholder="X coordinate">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<i class="fa fa-car" aria-hidden="true"></i> 
+				<select type="number" class="posicion" id="posicion-y" placeholder="Y coordinate">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select><br>
 				<button class="startplay" id="start-play">START</button>
 			</div>
 
 			<!-- tablero (oculta hasta que se presione START) -->
-			<div class="tablero" id="table-car"></div>
+			<div class="tablero nothing" id="table-car"></div>
 		</div>
 		
 

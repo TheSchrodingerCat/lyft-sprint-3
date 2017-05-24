@@ -6,7 +6,6 @@ for (i=0 ; i<6 ; i++){
 	tablero.push([0,0,0,0,0,0,0,0,0,0]);
 }
 
-
 var table = document.getElementById("table-car");
 
 var largeX = tablero.length;
@@ -30,6 +29,14 @@ for (i=0 ; i<largeX ; i++){
 	table.appendChild(ancho);
 }
 
+//coordenadas iniciales del auto
+var coordX = document.getElementById("posicion-x").value;
+var coordY = document.getElementById("posicion-y").value;
+
+//luego la posicion del auto es
+
+var posAuto = tablero[coordX][coordY];
+
 
 //---------- auto -------------------------------
 
@@ -40,26 +47,26 @@ function Auto(posicion_x,posicion_y){
 	this.posicion_y = posicion_y;
 	this.avanzar = function(){
 		posicion_y += 1;
+		console.log(posicion_y);
 		return posicion_y;
 	};
 	this.retroceder = function(){
 		posicion_y -= 1;
+		console.log(posicion_y);
 		return posicion_y;
 	};
 	this.ir_derecha = function(){
 		posicion_x += 1;
+		console.log(posicion_x);
 		return posicion_x;
 	};
 	this.ir_izquierda = function(){
 		posicion_x -= 1;
+		console.log(posicion_x);
 		return posicion_x;
 	}
 }
 
-//coordenadas iniciales del auto
-
-var coordX = document.getElementById("posicion-x").value;
-var coordY = document.getElementById("posicion-y").value;
 
 //creamos nuestro auto
 
@@ -77,14 +84,14 @@ var tecla = {
 
 //funcion de eventos
 function way(event){
-   var x = event.keyCode;
-   if (x==tecla.UP){
+   var evento = event.keyCode;
+   if (evento==tecla.UP && coordY<6){
       honda.avanzar();
-   } else if (x==tecla.LEFT){
+   } else if (evento==tecla.LEFT && coordX>0){
       honda.ir_izquierda();
-   } else if (x==tecla.RIGHT){
+   } else if (evento==tecla.RIGHT && coordX<10){
       honda.ir_derecha();
-   } else if (x==tecla.DOWN){
+   } else if (evento==tecla.DOWN && coordY>0){
       honda.retroceder();
    }
 }
