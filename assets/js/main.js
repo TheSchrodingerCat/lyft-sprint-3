@@ -1,3 +1,22 @@
+
+//----------- validación del teléfono -----------------
+
+
+
+
+document.getElementById("become-driver").addEventListener("click",function(){
+	var number = document.getElementById("cell-number").value;
+	document.getElementById("cell-number").value = "";
+
+	if (!(/^[0-9]{8}$/).test(number)){
+		alert("Número inválido.");
+	} else {
+		alert("Número ingresado con éxito.");
+	}
+
+});
+
+
 //------- para cambiar del input al tablero ------------------
 
 var start = document.getElementById("start-play");
@@ -10,6 +29,10 @@ start.addEventListener("click",function(){
 	area.classList.toggle("nothing");
 });
 
+
+//coordenadas iniciales del auto
+var coordX = document.getElementById("posicion-x").value;
+var coordY = document.getElementById("posicion-y").value;
 
 //constructor
 
@@ -36,9 +59,7 @@ function Auto(posicion_x,posicion_y){
 	}
 }
 
-//coordenadas iniciales del auto
-var coordX = document.getElementById("posicion-x").value;
-var coordY = document.getElementById("posicion-y").value;
+
 
 //luego la posicion del auto es
 
@@ -60,7 +81,7 @@ for (i=0 ; i<10 ; i++){
 
 //creamos nuestro auto
 
-var honda = new Auto(0,0);
+var honda = new Auto(coordX,coordY);
 
 //ahora enlazamos con los eventos
 //rescatamos el código de las teclas con un constructor literal

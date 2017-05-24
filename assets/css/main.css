@@ -40,13 +40,17 @@ Colors:
 .menu{
 	box-sizing: border-box;
 	width: 110px;
-	margin-top: 30px;
+	height: 83px;
+	padding-top: 30px;
+	padding-left: 10px;
 	color: white;
 	float: right;
 }
 
 .menu:hover{
-	background: black;
+	background: #D61470;
+	font-weight: bold;
+	transition: 0.7s;
 }
 
 
@@ -260,8 +264,12 @@ Colors:
 	padding: 0 90px;
 }
 
-#box-mr{
+#box-mr, #box-morelinks{
 	margin-top: 16px;
+}
+
+.fa.fa-facebook-square{
+	font-size: 18px;
 }
 
 .link{
