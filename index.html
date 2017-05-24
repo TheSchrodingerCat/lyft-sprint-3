@@ -36,12 +36,18 @@
 	<!-- play with lyft -->
 	<div class="playdrive" id="play-drive">
 		<div class="titleplay" id="title-play">PLAY WITH LYFT</div>
+		
+		<!-- (2 divs: una de ingreso de coordenadas y una oculta con el tablero) -->
 		<!-- interfaz -->
 		<div class="initplay" id="init-play">
 			<i class="fa fa-car" aria-hidden="true"></i> <input type="text" class="posicion" id="posicion-x" placeholder="X coordinate">
 			<i class="fa fa-car" aria-hidden="true"></i> <input type="text" class="posicion" id="posicion-y" placeholder="Y coordinate"><br>
 			<button class="startplay" id="start-play">START</button>
 		</div>
+
+		<!-- tablero (oculta hasta que se presione START) -->
+		<div class="tablero" id="table-car"></div>
+
 
 		<!-- espacio... -->
 		<div class="prefooter" id="pre-footer">
