@@ -66,11 +66,32 @@ var coordY = document.getElementById("posicion-y").value;
 var honda = new Auto(coordX,coordY);
 
 //ahora enlazamos con los eventos
+//rescatamos el código de las teclas con un constructor literal
 
+var tecla = {
+	LEFT: 37,
+	UP: 38,
+	RIGHT:39,
+	DOWN: 40
+}
 
+//funcion de eventos
+function way(event){
+   var x = event.keyCode;
+   if (x==tecla.UP){
+      honda.avanzar();
+   } else if (x==tecla.LEFT){
+      honda.ir_izquierda();
+   } else if (x==tecla.RIGHT){
+      honda.ir_derecha();
+   } else if (x==tecla.DOWN){
+      honda.retroceder();
+   }
+}
 
+//todo esto se ejecutará cuando se presionen las teclas UP, DOWN, LEFT Y RIGHT
 
-
+document.addEventListener("keydown",way);
 
 
 
