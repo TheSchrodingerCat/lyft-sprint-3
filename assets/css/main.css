@@ -304,6 +304,8 @@ Colors:
 .altoCasilla{
 	width: 10%;
 	height: 40px;
+	background: url("../img/car.png");
+	background-size: cover;
 	float: left;
 	margin-top: 5px;
 	box-sizing: border-box;
@@ -317,3 +319,4 @@ Colors:
 .nothing{
 	display: none;
 }
+

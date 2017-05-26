@@ -30,32 +30,31 @@ start.addEventListener("click",function(){
 });
 
 
-//coordenadas iniciales del auto
-var coordX = document.getElementById("posicion-x").value;
-var coordY = document.getElementById("posicion-y").value;
+
 
 //constructor
 
 //---------- auto -------------------------------
 
+
 function Auto(posicion_x,posicion_y){
-	this.posicion_x = posicion_x;
-	this.posicion_y = posicion_y;
+	this.posicion_x = parseInt(posicion_x);
+	this.posicion_y = parseInt(posicion_y);
 	this.avanzar = function(){
 		this.posicion_y += 1;
-		console.log(this.posicion_y);
+		console.log(typeof this.posicion_y + ": y = " + this.posicion_y);
 	};
 	this.retroceder = function(){
 		this.posicion_y -= 1;
-		console.log(this.posicion_y);
+		console.log(typeof this.posicion_y + ": y = " + this.posicion_y);
 	};
 	this.ir_derecha = function(){
 		this.posicion_x += 1;
-		console.log(this.posicion_x);
+		console.log(typeof this.posicion_x + ": x = " + this.posicion_x);
 	};
 	this.ir_izquierda = function(){
 		this.posicion_x -= 1;
-		console.log(this.posicion_x);
+		console.log(typeof this.posicion_x + ": x = " + this.posicion_x);
 	}
 }
 
@@ -77,11 +76,13 @@ for (i=0 ; i<10 ; i++){
 	}
 }*/
 
-
+//coordenadas iniciales del auto
+var coordX = document.getElementById("posicionx").value;
+var coordY = document.getElementById("posiciony").value;
 
 //creamos nuestro auto
 
-var honda = new Auto(coordX,coordY);
+var honda = new Auto(4,2);
 
 //ahora enlazamos con los eventos
 //rescatamos el código de las teclas con un constructor literal
@@ -98,12 +99,16 @@ function way(event){
    var evento = event.keyCode;
    if (evento==tecla.UP/* && coordY<6*/){
       honda.avanzar();
+      console.log(honda);
    } else if (evento==tecla.LEFT/* && coordX>0*/){
       honda.ir_izquierda();
+      console.log(coordX);
    } else if (evento==tecla.RIGHT/* && coordX<10*/){
       honda.ir_derecha();
+      console.log(coordX);
    } else if (evento==tecla.DOWN/* && coordY>0*/){
       honda.retroceder();
+      console.log(coordY);
    }
 }
 
@@ -112,6 +117,13 @@ function way(event){
 document.addEventListener("keydown",way);
 
 
+
+//posicionar auto
+
+var posicionHonda = document.createElement("img");
+posicionHonda.setAttribute("class","posHonda");
+posicionHonda.setAttribute("id","pos-honda");
+posicionHonda.setAttribute("src","assets/img/car.png");
 
 //----------- tablero ----------------------
 
@@ -139,8 +151,11 @@ for (i=0 ; i<largeX ; i++){
 
 		//cada ancho almacena largeY divs de alto, por tanto:
 		ancho.appendChild(alto);
+
+		
 	}
 	//ahora la div padre adopta el tablero
 	table.appendChild(ancho);
 }
 
+tablero[3][1] = posicionHonda;
